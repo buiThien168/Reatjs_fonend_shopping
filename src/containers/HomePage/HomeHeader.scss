@@ -1,20 +1,22 @@
 .home-header-container{
     height: 60px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 40px;
     .home-header-content{
         width: 100%;
         height: 100%;
         display: flex;
         .left-content{
-            width: 25%;
+            width: 20%;
             display: flex;
             align-items: center;
             .header-logo{
-                background: url('../../assets/Logo.svg') center center no-repeat;
+                
                 height: 100%;
                 width: 100%;
                 cursor: pointer;
+                transform: scale(0.5,0.5);
+                margin-left: -45px;
             }
             i{
                 font-size: 25px;
@@ -23,7 +25,7 @@
             }
         }
         .center-content{
-            width: 50%;
+            width: 55%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -39,8 +41,126 @@
         .right-content{
             width: 25%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
+
+            .support{
+                padding-right: 50px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                i{
+                    font-size: 15px;
+                    margin-right: 5px;
+                }
+            }
+            .language-vi{
+                cursor: pointer;
+                &.active{
+                    color: orange;
+                }
+            }
+            .language-en{
+                margin: 0 10px;
+                cursor: pointer;
+                &.active{
+                    color: blue;
+                }
+            }
         }
     }
+}
+.home-header-banner{
+    background: url('../../assets/headerBackgoud.jpg') ;
+    height: 500px;
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    // margin: 5px 0;
+    .content-up{
+        background-image: linear-gradient(rgba(0,0,0,0.25),rgba(225,225,225,0.1));
+        height: 65%;
+        padding-top: 15px;
+        .title1{
+            text-align: center;
+            font-size: 30px;
+            text-shadow: 1px 1px 1px #333;
+            margin-bottom: 5px;
+            color: white;
+            // margin-top: 30px;
+             margin-top: 20px;
+        }
+        .title2{
+            text-align: center;
+            font-size: 30px;
+            text-shadow: 1px 1px 1px #333;
+            color: white;
+            margin-bottom: 15px;
+        }
+        .search{
+            text-align: center;
+            // border: 1px solid red;
+            width: fit-content;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 10px;
+            // display: flex;
+            // width: 400px;
+            border-radius: 30px;
+            background: #f7d800;
+            i {
+                margin: 0 5px;
+    
+            }
+            input {
+                height: 30px;
+                width: 360px;
+                background: transparent;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    .content-down{
+        height: 35%;
+        display: flex;
+        align-items: center;
+        // align-items: flex-end;
+        justify-content: center;
+        background-image: linear-gradient(rgba(225,225,225,0.1),rgba(225,225,225,0.9),rgba(225,225,225,1));
+        .options{
+            // width: 130px;
+            text-align: center;
+            display: flex;
+           gap: 50px;
+           justify-content: center;
+            .option-child{
+                .icon-child{
+                    background: white;
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+                    i {
+                        font-size: 20px;
+                        color: #50bce2;
+                    }
+                }
+                .text-child{
+                    font-size: 17px;
+                    font-weight: 500;
+
+                    &:hover{
+                        color: #50bce2;
+                    }
+                }
+            }
+        }
+    }
+    
 }
